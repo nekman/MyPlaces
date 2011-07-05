@@ -1,5 +1,7 @@
 package se.nekman.places.entities;
 
+import se.nekman.places.common.StringUtils;
+
 import com.google.android.maps.GeoPoint;
 
 public class Place {
@@ -23,7 +25,7 @@ public class Place {
 	}
 
 	public Place(final String name, final double longitude, final double latitude) {
-		this(name, longitude, latitude, "", -1);
+		this(name, longitude, latitude, StringUtils.EMPTY, -1);
 	}
 
 	public String getName() {

@@ -1,5 +1,6 @@
 package se.nekman.places.app;
 
+import se.nekman.places.common.StringUtils;
 import se.nekman.places.entities.Place;
 import se.nekman.places.repository.PlaceRepository;
 import se.nekman.places.service.IPlaceService;
@@ -19,7 +20,7 @@ public class PlacesApplication extends Application {
 
 	private static PlacesApplication instance;
 	private static IPlaceService placeService;
-	private final static Place EMPTY_PLACE = new Place("", 0, 0);
+	private final static Place EMPTY_PLACE = new Place(StringUtils.EMPTY, 0, 0);
 
 	private Place currentPlace;
 	private TabHost tabHost;

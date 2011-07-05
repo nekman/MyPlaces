@@ -4,6 +4,7 @@ import static android.location.LocationManager.GPS_PROVIDER;
 import se.nekman.places.R;
 import se.nekman.places.app.ActivityBase;
 import se.nekman.places.app.PlacesApplication;
+import se.nekman.places.common.StringUtils;
 import se.nekman.places.entities.Place;
 import se.nekman.places.service.ILocationFinder;
 import se.nekman.places.service.IPlaceService;
@@ -63,7 +64,7 @@ public class PlaceAddView extends ActivityBase {
 
 	private void setupLocationManager() {
 
-		progressDialog = ProgressDialog.show(PlaceAddView.this, "","Trying to find your location. Please wait...", true);
+		progressDialog = ProgressDialog.show(PlaceAddView.this, StringUtils.EMPTY, "Trying to find your location. Please wait...", true);
 
 		locationListner = new LocationService(new ILocationFinder() {
 			public void onFind() {

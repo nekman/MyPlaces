@@ -1,6 +1,6 @@
 package se.nekman.places.repository;
 
-import static se.nekman.places.common.StringUtils.isEmptyOrNull;
+import static se.nekman.places.common.StringUtils.isEmpty;
 import android.content.Context;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
@@ -49,7 +49,7 @@ public class Database extends SQLiteOpenHelper {
 	@Override
 	public void onUpgrade(final SQLiteDatabase db, final int oldVersion, final int newVersion) {
 		try {
-			if (!isEmptyOrNull(databaseUpgrade)) {
+			if (!isEmpty(databaseUpgrade)) {
 				db.execSQL(databaseUpgrade);
 			}
 		} catch (final SQLException e) {
