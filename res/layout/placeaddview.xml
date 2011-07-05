@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:scrollbars="vertical"
+    android:minHeight="300px"
+    android:layout_height="wrap_content">
+    
+    <TextView
+        android:id="@+id/lblName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Name:" android:textSize="18dip"/>
+        
+    <EditText
+        android:id="@+id/txtName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblName"
+	/>
+    
+    
+    <TextView
+        android:id="@+id/lblDesc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dip"
+        android:layout_below="@id/txtName"
+        android:text="Description:" android:textSize="18dip"/>
+        
+    <EditText
+        android:id="@+id/txtDesc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblDesc"
+    android:singleLine="false" android:minLines="5"/>
+        
+    <Button
+        android:id="@+id/btnOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_below="@id/txtDesc"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dip"
+        android:text="Save" />
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/btnOk" 
+        android:layout_alignTop="@id/btnOk"
+        android:text="Cancel" />
+</RelativeLayout>

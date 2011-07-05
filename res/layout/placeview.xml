@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent">
+     
+       <TextView android:layout_width="wrap_content" 
+       android:textAppearance="?android:attr/textAppearanceMedium" 
+       android:id="@+id/txtHeader" android:layout_height="wrap_content" 
+       android:layout_alignParentLeft="true"></TextView>
+   
+       <com.google.android.maps.MapView 
+       	android:layout_width="fill_parent"
+       	android:layout_height="fill_parent"
+       	android:minHeight="300dip"
+       	android:clickable="true" 
+       	android:id="@+id/mapView" 
+       	android:enabled="true"
+        android:apiKey="0cBPdVeT-bKKLHQW-cCpJC93Zj0293JTppbF0-A" 
+       	android:layout_marginBottom="50dip" 
+       	android:layout_marginTop="50dip"></com.google.android.maps.MapView>
+      
+		<LinearLayout android:id="@+id/zoom" 
+       	 	android:layout_width="wrap_content" 
+        	android:layout_height="wrap_content"
+        	android:layout_centerHorizontal="true"
+        	android:layout_alignParentBottom="true" 
+        	android:layout_marginBottom="80dip" android:clickable="true"/>
+                
+     <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal">
+
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/btnEdit"
+            android:text="Edit" android:onClick="onClick"></Button>
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/btnDelete"
+            android:text="Delete" android:onClick="onClick"></Button>
+
+    </LinearLayout>
+</RelativeLayout>

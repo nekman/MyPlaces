@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="se.nekman.places"
+      android:versionCode="1"
+      android:versionName="1.0">
+      
+    <uses-sdk android:minSdkVersion="3" android:targetSdkVersion="8" />
+	<uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    
+    <application android:icon="@drawable/icon"  android:name=".app.PlacesApplication" android:label="@string/app_name">
+    	          
+        <uses-library android:name="com.google.android.maps" />  
+        <activity android:name=".view.PlaceMainView" android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".view.PlacesListView" android:configChanges="keyboardHidden|orientation" android:label="@string/app_name" />
+        <activity android:name=".view.PlaceView" android:configChanges="keyboardHidden|orientation" android:label="@string/app_name" />
+        <activity android:name=".view.PlaceAddView" android:label="@string/app_name" />
+        
+    </application>
+</manifest>
